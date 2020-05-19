@@ -23,7 +23,7 @@ function squareNumber(inputNumber) {
 const halfNumber = function (inputNumber) {
     let result = inputNumber / 2;
     console.log(`Half of ${inputNumber} is ${result}`);
-    return(result);
+    return (result);
 }
 
 /**
