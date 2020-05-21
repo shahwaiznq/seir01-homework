@@ -22,7 +22,7 @@ console.log(maxOfThree(7,28,56))
 
 const characterOne = function (indiLetter) {
     indiLetter = indiLetter.toLowerCase()
-    if (indiLetter == 'a' ||  indiLetter =='e' || indiLetter == 'i' || indiLetter == 'o' || indiLetter == 'u') {
+    if (indiLetter == 'a' ||  indiLetter == 'e' || indiLetter == 'i' || indiLetter == 'o' || indiLetter == 'u') {
     return `nice one! this letter ${ indiLetter } is a vowel`;
   } else {
     return `oh no! This ${ indiLetter } is not a vowel`;
