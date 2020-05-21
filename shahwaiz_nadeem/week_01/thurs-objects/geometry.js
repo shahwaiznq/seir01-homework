@@ -31,9 +31,10 @@ const perimeter = (rectangle) => {
   return (2*rectangle.length) + (2*rectangle.width);
 }
 
-console.log(isSquare(rectangleA));
-console.log(area(rectangleA));
-console.log(perimeter(rectangleA));
+// TESTS - ACTIVATE TO TEST
+// console.log(isSquare(rectangleA));
+// console.log(area(rectangleA));
+// console.log(perimeter(rectangleA));
 
 /*
 Part 2, Triangle
@@ -56,25 +57,39 @@ const triangleA = {
 }
 
 const isEquilateral = (triangle) => {
-  if (triangle.sideA === triangle.sideB && triangle.sideB === triangle.sideC) {
+  if (triangle.sideA === triangle.sideB && triangle.sideB === triangle.sideC) { // AND operator to see if all sides are equal
     return true;
   }
   return false;
 }
 
 const isIsosceles = (triangle) => {
-
+  if (triangle.sideA === triangle.sideB || triangle.sideB === triangle.sideC || triangle.sideA === triangle.sideC) { // OR operators to see if any two sides are the same
+    return true;
+  }
+  return false;
 }
 
 const areaTri = (triangle) => {
-
+  let halfBase = triangle.sideB/2;
+  let height = Math.sqrt( Math.pow(triangle.sideA, 2) - Math.pow(halfBase, 2) ); //  new imaginary triangle to find 'h' half the base (B) as the bottom, hypotenus (A)
+  return halfBase * height;
 }
 
 const isObtuse = (triangle) => {
-
+  if (Math.pow(triangle.sideA,2) + Math.pow(triangle.sideB,2) < Math.pow(triangle.sideC,2)){
+    return true;
+  } else if (Math.pow(triangle.sideA,2) + Math.pow(triangle.sideC,2) < Math.pow(triangle.sideB,2)) {
+    return true;
+  } else if (Math.pow(triangle.sideC,2) + Math.pow(triangle.sideB,2) < Math.pow(triangle.sideA,2)) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
-console.log(isEquilateral(triangleA));
-console.log(isIsosceles(triangleA));
-console.log(areaTri(triangleA));
-console.log(isObtuse(triangleA));
+// TESTS - ACTIVATE TO TEST
+// console.log(isEquilateral(triangleA));
+// console.log(isIsosceles(triangleA));
+// console.log(areaTri(triangleA));
+// console.log(isObtuse(triangleA));
