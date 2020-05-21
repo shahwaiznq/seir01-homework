@@ -25,7 +25,7 @@ const halfNumber = function (inputNumber) {
     console.log(`Half of ${inputNumber} is ${result}`);
     return (result);
 }
-
+ 
 /**
  * This function takes 2 numbers as input, and finds what percentage of the second number that the first number is, and returns it. Also logs the result
  * @param{number}[firstNumber]
@@ -134,11 +134,9 @@ function notBad(inputString) {
     if ((posOfNotSubStr != -1) && (posOfBadSubStr != -1) && (posOfBadSubStr > posOfNotSubStr)) {
         let outputString = inputString.substr(0, posOfNotSubStr) + 'good' + inputString.substr(posOfBadSubStr + 3);
         return (outputString);
-
     } else {
         return (inputString);
     }
-
 }
 
 //testing
