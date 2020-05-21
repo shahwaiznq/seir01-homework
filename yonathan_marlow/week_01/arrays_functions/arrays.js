@@ -1,14 +1,14 @@
 //  # Array and Functions Bonus Material
 //1. Define a function `maxOfTwoNumbers` that takes two numbers as arguments and returns the largest of them. Use the if-then-else construct available in Javascript. You'll have to remember your pre-work, or do some googling to figure this out.
 // (1) not sure about THEN? this seems to work without it.
-const maxOfTwoNumbers = function (num1, num2) {
+const maxOfTwo = function (num1, num2) {
     if (num1 > num2 ) {
       return `${num1} is bigger than ${num2}`;
     } else {
       return `${num2} is bigger than ${num1}`;
     }
 }
-console.log(maxOfTwoNumbers(12,9));
+console.log(maxOfTwo(12,9));
 
 //surely there is a better way to do this?
 // (2)/2. Define a function `maxOfThree` that takes three numbers as arguments and returns the largest of them.
@@ -23,6 +23,8 @@ const maxOfThree = function (num1, num2, num3){
       return `${num3} is bigger than ${num1} & ${num2}`;
     }
 }
+
+return maxofTwo( maxOfTwo(a,b), maxofTwo(b, c));
 
 console.log(maxOfThree(5,3,4));
 console.log(maxOfThree(4,6,11));
@@ -138,4 +140,4 @@ const filterLongWords = function (longwords, num1) {
     }
   return longer
 }
-console.log(filterLongWords(['dragon', 'be', 'angry', 'computer'],4));
+console.log(filterLongWords(['dragon', 'be', 'angry', 'computer'],6));
