@@ -53,8 +53,18 @@ console.log(character("x"));
 // number 4 #######################################
 const sumArray = function(numbers) {
   let total = 0;
-  for (let i = 0; i > numbers.length; i++) { // counts all the numbers from 0
-      total = total + numbers[i] // adds the total and
+  for (let i = 0; i < numbers.length; i++) { // counts all the numbers from 0
+      total = total + numbers[i] // adds the total and returns
+  }
+  return total
+}
+
+console.log(sumArray([4, 8, 12, 16]));
+
+const sumArray = function(numbers) {
+  let total = 1;
+  for (let i = 0; i < numbers.length; i++) { // counts all the numbers from 0
+      total = total * numbers[i] // multiplys the total
   }
   return total
 }
