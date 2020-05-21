@@ -151,7 +151,7 @@ const validateCreditCard = function(num){
     if (num[i] !== "-" && Number.isInteger(parseInt(num[i])) === false){
       resultObject.error = "Invalid characters";
       resultObject.isCorrect = "false";
-      return false;
+      return resultObject;
     } else if (num[i] !== "-"){
       numArray.push(parseInt(num[i]));
     }      //to this point I've created an array of numbers, and checked for invalid characters;
@@ -159,15 +159,15 @@ const validateCreditCard = function(num){
   if (numArray.length !== 16){
     resultObject.error = "Incorrect length";
     resultObject.isCorrect = "false";
-    return false;
+    return resultObject;
   } else if (sumArray(numArray) <= 16){
     resultObject.error = "The sum of all digits must be greater than 16";
     resultObject.isCorrect = "false"; //this checks for the sum of integers
-    return false;
+    return resultObject;
   } else if (numArray[numArray.length - 1] % 2 !== 0){
     resultObject.error = "The final number must be even";
     resultObject.isCorrect = "false"; //this checks for an even final number;
-    return false;
+    return resultObject;
   } else for (let i = 1; i < numArray.length; i++){
       if (numArray[0] !== numArray[i]){
         sameNumberCheck = false;
@@ -177,7 +177,7 @@ const validateCreditCard = function(num){
     if (sameNumberCheck === true){
       resultObject.error = "Must be at least 2 digits";
       resultObject.isCorrect = "false";     //checks for more than one kind of digit
-      return false;
+      return resultObject;
     }
   return resultObject;
 }
@@ -203,22 +203,21 @@ console.log(validateCreditCard(`6666-6666-666d6-6661`), "odd final number fail")
 // - `1111-1111-1111-1110` sum less than 16
 // - `6666-6666-6666-6661` odd final number
 //
-// ## Example
-// ```
-// validateCreditCard('9999-9999-8888-0000'); // Returns: true
-// ```
-//
-// *Hint*: Remove the dashed from the input string before checking if the input credit card number is valid.
 //
 // *Bonus*: Return an object indicating whether the credit card is valid, and if not, what the error is
-//
 // ```
 // { valid: true, number: 'a923-3211-9c01-1112' }
 // { valid: false, number: 'a923-3211-9c01-1112', error: ‘wrong_length’ }
 // ```
-//
+"Done up to here!!!"
+
 // *Double Bonus*: Make your credit card scheme even more advanced! What are the rules, and what are some numbers that pass or fail? Ideas: check expiration date! Check out the Luhn Algorithm for inspiration.
 //
+
+
+
+
+
 // Part 4
 //
 // # JavaScript Bank
