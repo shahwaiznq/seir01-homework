@@ -39,23 +39,23 @@ const result = {};
 const planTripN = function(startStop, endStop = "Union Square"){
   let travelledArray = [];
   for (let i = 0; i < nLine.length; i++){
-    let indexStart = nLine.indexOf(startStop); //this is a number
-    let indexEnd = nLine.indexOf(endStop);
-    result.NStops = Math.abs(indexStart - indexEnd);
+    let indexStart = nLine.indexOf(startStop); //this is a number, the index of the entry station
+    let indexEnd = nLine.indexOf(endStop);    // this is a number, the index of the exit station
+    result.NStops = Math.abs(indexStart - indexEnd); // this is the total number of stops
     if (indexStart < indexEnd){
       travelledArray = nLine.slice(indexStart + 1, indexEnd + 1)
       result.NPath = travelledArray.join(", ");
       return result;
     } else {
       travelledArray = nLine.slice(indexEnd, indexStart);
-      travelledArray = travelledArray.reverse();
-      result.NPath = travelledArray.join(", ");
+      travelledArray = travelledArray.reverse();  //this is because they may travel the opposite direction
+      result.NPath = travelledArray.join(", ");   // this is saving the path they travel as a string
       return result;
     }
   }
 }
-planTripN("Times Square", "Astor Place")
-console.log(result)
+// planTripN("Times Square", "Astor Place")
+// console.log(result)
 
 const planTripL = function(startStop, endStop = "Union Square"){
   let travelledArray = [];
@@ -75,8 +75,8 @@ const planTripL = function(startStop, endStop = "Union Square"){
     }
   }
 }
-planTripL("1st", "8th")
-console.log(result)
+// planTripL("1st", "8th")
+// console.log(result)
 
 
 const planTripSix = function(startStop, endStop = "Union Square"){
@@ -97,15 +97,21 @@ const planTripSix = function(startStop, endStop = "Union Square"){
     }
   }
 }
-planTripSix("Grand Central", "Union Square")
-console.log(result)
+// planTripSix("Grand Central", "Union Square")
+// console.log(result)
 
 let singleTrainMessage = function(trainLine, stopArray, totalStops,){
+  if (totalStops < 2){
+    return "You sure you shouldn't walk instead?"   //yes, you should.
+  }
   return `You must travel through the following stops on the ${trainLine} line: ${stopArray}. ${totalStops} stops in total.`
 }
 
 let multipleTrainMessage = function(trainLine, stopArray, stopArray2, totalStops){
-  return `You must travel through the following stops on the ${trainLine} line: ${stopArray}. Then change at "Union Square". Your journey continues through the following stops ${stopArray2}. ${totalStops} stops in total.`
+  if (stopArray.length === 0){
+    return "Just board the train you want, silly!"; // this is for that rare person who boards the wrong train at a transfer station.
+  }
+  return `You must travel through the following stops on the ${trainLine} line: ${stopArray}. Then change at "Union Square". Your journey continues through the following stops: ${stopArray2}. ${totalStops} stops in total.`
 }
 
 
@@ -139,7 +145,7 @@ const planTrip = function (startLine, startStop, endLine, endStop){
     return multipleTrainMessage(n, result.NPath, result.SixPath, totalStops);
   }                                           //this covers all scenarios starting on the "N" line.
   if (startLine === l && endLine === n){
-    return planTripL(startStop);
+    planTripL(startStop);
     planTripN("Union Square", endStop);
     let totalStops = result.LStops + result.NStops;
     return multipleTrainMessage(l, result.LPath, result.NPath, totalStops);
@@ -164,8 +170,9 @@ const planTrip = function (startLine, startStop, endLine, endStop){
 
 
 
-console.log(planTrip("L", "8th", "6", "Grand Central"));
+console.log(planTrip("L", "8th", "N", "49th"));
 
+//if (totalStops < 2) change the message for singular stops
 
 //
 //
