@@ -34,104 +34,140 @@ const nLine = ["Times Square", "34th", "28th", "23rd", "Union Square", "Astor Pl
 const lLine = ["8th", "6th", "Union Square", "3rd", "1st"];
 const sixLine = ["Grand Central", "33rd", "28th", "23rd", "Union Square", "Astor Place"];
 
+const result = {};
+
 const planTripN = function(startStop, endStop = "Union Square"){
-  let result = 'You must travel through the following stops on the "N" line: ';
   let travelledArray = [];
   for (let i = 0; i < nLine.length; i++){
     let indexStart = nLine.indexOf(startStop); //this is a number
     let indexEnd = nLine.indexOf(endStop);
-    let nStops = Math.abs(indexStart - indexEnd);
+    result.NStops = Math.abs(indexStart - indexEnd);
     if (indexStart < indexEnd){
-      travelledArray = nLine.slice(indexStart, indexEnd)
-      return result + travelledArray.join(", ")+ ". A total of " + nStops + " stops.";
+      travelledArray = nLine.slice(indexStart + 1, indexEnd + 1)
+      result.NPath = travelledArray.join(", ");
+      return result;
     } else {
       travelledArray = nLine.slice(indexEnd, indexStart);
       travelledArray = travelledArray.reverse();
-      return result + travelledArray.join(", ")+ ". A total of " + nStops + " stops.";
+      result.NPath = travelledArray.join(", ");
+      return result;
     }
   }
 }
-console.log(planTripN("Astor Place", "Times Square"));
+planTripN("Times Square", "Astor Place")
+console.log(result)
 
 const planTripL = function(startStop, endStop = "Union Square"){
-  let result = 'You must travel through the following stops on the "L" line: ';
   let travelledArray = [];
   for (let i = 0; i < lLine.length; i++){
-    let indexStart = lLine.indexOf(startStop);
+    let indexStart = lLine.indexOf(startStop); //this is a number
     let indexEnd = lLine.indexOf(endStop);
-    let lStops = Math.abs(indexStart - indexEnd);
+    result.LStops = Math.abs(indexStart - indexEnd);
     if (indexStart < indexEnd){
-      travelledArray = lLine.slice(indexStart, indexEnd)
-      return result + travelledArray.join(", ")+ ". A total of " + lStops + " stops.";
+      travelledArray = lLine.slice(indexStart + 1, indexEnd + 1)
+      result.LPath = travelledArray.join(", ");
+      return result;
     } else {
       travelledArray = lLine.slice(indexEnd, indexStart);
       travelledArray = travelledArray.reverse();
-      return result + travelledArray.join(", ")+ ". A total of " + lStops + " stops.";
+      result.LPath = travelledArray.join(", ");
+      return result;
     }
   }
 }
-//console.log(planTripL("8th", "1st"));
+planTripL("1st", "8th")
+console.log(result)
 
 
 const planTripSix = function(startStop, endStop = "Union Square"){
-  let result = 'You must travel through the following stops on the "6" line: ';
   let travelledArray = [];
   for (let i = 0; i < sixLine.length; i++){
-    let indexStart = sixLine.indexOf(startStop);
+    let indexStart = sixLine.indexOf(startStop); //this is a number
     let indexEnd = sixLine.indexOf(endStop);
-    let sixStops = Math.abs(indexStart - indexEnd);
+    result.SixStops = Math.abs(indexStart - indexEnd);
     if (indexStart < indexEnd){
-      travelledArray = sixLine.slice(indexStart, indexEnd)
-      return result + travelledArray.join(", ")+ ". A total of " + sixStops + " stops.";
+      travelledArray = sixLine.slice(indexStart + 1, indexEnd + 1)
+      result.SixPath = travelledArray.join(", ");
+      return result;
     } else {
       travelledArray = sixLine.slice(indexEnd, indexStart);
       travelledArray = travelledArray.reverse();
-      return result + travelledArray.join(", ")+ ". A total of " + sixStops + " stops.";
+      result.SixPath = travelledArray.join(", ");
+      return result;
     }
   }
 }
-//console.log(planTripSix("33rd", "Astor Place"));
-//
-//
-// const possibleLines = ["N", "L", "6"];
-//
-// const planTrip = function (startLine, startStop, endLine, endStop){
-// //  let resultMessage =
-//   const n = possibleLines[0];
-//   const l = possibleLines[1];
-//   const six = possibleLines[2];
-//   if (startLine === endLine){
-//     if (startLine === n){
-//       planTripN(startStop, endStop);      //do I need return before this line, or does calling a function return it?
-//     } else if (startLine === l){
-//       planTripL(startStop, endStop);       //do I need return before this line, or does calling a function return it?
-//     } else {
-//       planTripSix(startStop, endStop);       //do I need return before this line, or does calling a function return it?
-//     }
-//   }
-//   if (startLine === n && endLine === l){
-//     planTripN(startStop) + planTripL("Union Square", endStop)
-//   } else if (startLine === n && endLine === six){
-//     planTripN(startStop) + planTripSix("Union Square", endStop)
-//   }                                           //this covers all scenarios starting on the "N" line.
-//   if (startLine === l && endLine === n){
-//     planTripL(startStop) + planTripN("Union Square", endStop);
-//   } else if (startLine === l && endLine === six){
-//     planTripL(startStop) + planTripSix("Union Square", endStop)
-//   }                                           //this covers all scenarios starting on the "L" line.
-//   if (startLine === six && endLine === n){
-//     planTripSix(startStop) + planTripN("Union Square", endStop)
-//   } else if (startLine === six && endLine === l){
-//     planTripSix(startStop) + planTripL("Union Square", endStop)
-//   }
-// }
-//
-//
-//
-// console.log(planTrip("L", "8th", "N", "23rd"));
-//
+planTripSix("Grand Central", "Union Square")
+console.log(result)
+
+let singleTrainMessage = function(trainLine, stopArray, totalStops,){
+  return `You must travel through the following stops on the ${trainLine} line: ${stopArray}. ${totalStops} stops in total.`
+}
+
+let multipleTrainMessage = function(trainLine, stopArray, stopArray2, totalStops){
+  return `You must travel through the following stops on the ${trainLine} line: ${stopArray}. Then change at "Union Square". Your journey continues through the following stops ${stopArray2}. ${totalStops} stops in total.`
+}
 
 
+const possibleLines = ["N", "L", "6"];
+
+const planTrip = function (startLine, startStop, endLine, endStop){
+  const n = possibleLines[0];
+  const l = possibleLines[1];
+  const six = possibleLines[2];
+  if (startLine === endLine){
+    if (startLine === n){
+      planTripN(startStop, endStop);
+      return singleTrainMessage(n, result.NPath, result.NStops)
+    } else if (startLine === l){
+      planTripL(startStop, endStop);
+      return singleTrainMessage(l, result.LPath, result.LStops)
+    } else {
+      planTripSix(startStop, endStop);
+      return singleTrainMessage(six, result.SixPath, result.SixStops)
+    }
+  }
+  if (startLine === n && endLine === l){
+    planTripN(startStop);
+    planTripL("Union Square", endStop);
+    let totalStops = result.NStops + result.LStops;
+    return multipleTrainMessage(n, result.NPath, result.LPath, totalStops);
+  } else if (startLine === n && endLine === six){
+    planTripN(startStop);
+    planTripSix("Union Square", endStop);
+    let totalStops = result.NStops + result.SixStops;
+    return multipleTrainMessage(n, result.NPath, result.SixPath, totalStops);
+  }                                           //this covers all scenarios starting on the "N" line.
+  if (startLine === l && endLine === n){
+    return planTripL(startStop);
+    planTripN("Union Square", endStop);
+    let totalStops = result.LStops + result.NStops;
+    return multipleTrainMessage(l, result.LPath, result.NPath, totalStops);
+  } else if (startLine === l && endLine === six){
+    planTripL(startStop);
+    planTripSix("Union Square", endStop);
+    let totalStops = result.LStops + result.SixStops;
+    return multipleTrainMessage(l, result.LPath, result.SixPath, totalStops);
+  }                                           //this covers all scenarios starting on the "L" line.
+  if (startLine === six && endLine === n){
+    planTripSix(startStop);
+    planTripN("Union Square", endStop);
+    let totalStops = result.SixStops + result.NStops;
+    return multipleTrainMessage(six, result.SixPath, result.NPath, totalStops);
+  } else if (startLine === six && endLine === l){
+    planTripSix(startStop);
+    planTripL("Union Square", endStop);
+    let totalStops = result.SixStops + result.LStops;
+    return multipleTrainMessage(six, result.SixPath, result.LPath, totalStops);
+  }
+}
+
+
+
+console.log(planTrip("L", "8th", "6", "Grand Central"));
+
+
+//
 //
 // * There are 3 subway lines:
 //   * The N line has the following stops: Times Square, 34th, 28th, 23rd, Union Square, and 8th
