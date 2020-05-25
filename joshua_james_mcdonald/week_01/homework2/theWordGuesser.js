@@ -56,7 +56,15 @@ const guessLetter = function (guessedLetter) {
     console.log(`Current reward is $${reward}`);
 
 }
-// guessLetter('F');
-// guessLetter('Q');
-// guessLetter('O');
-// guessLetter('X');
+guessLetter('F');
+guessLetter('Q');
+guessLetter('O');
+guessLetter('X');
+
+// guessLetter('P');
+// guessLetter('P');
+// guessLetter('P');
+// guessLetter('P');
+// guessLetter('P');
+// guessLetter('P');
+// guessLetter('P');
