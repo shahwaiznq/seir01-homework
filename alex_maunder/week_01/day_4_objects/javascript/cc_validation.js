@@ -74,6 +74,5 @@
       return truth + error
     };
 
-
     return `Valid Credit Card.`
   };

@@ -3,12 +3,12 @@ const validateCreditCard = function (cardNo) {
     // input validation
     let error = "";
     let cardRaw = cardNo;
-    cardNo = cardNo.split('-').join(""); // NOTE is there a better way? 
+    cardNo = cardNo.split('-').join(""); // clean the string inputs
     if (cardNo.length != 16) {
         return ({valid: false, number: cardRaw, error: `Too short, current card length is ${cardNo.length}`});
     }
     cardNo = cardNo.split(""); // convert to array
-    let set = new Set(cardNo);
+    let set = new Set(cardNo); // sets are like arrays where all the entries must be unique - ie gets rid of duplicates
     if (set.size == 1) {
         return ({valid: false, number: cardRaw, error: `cant be just the same number over and over. current set length is ${set.size}`});
     } else if (cardNo[cardNo.length - 1] % 2 != 0) {
@@ -19,7 +19,7 @@ const validateCreditCard = function (cardNo) {
         if (isNaN(cardNo[i])) {
             return ({valid: false, number: cardRaw, error: `Contains non-number characters`});
         }
-        sum += parseFloat(cardNo[i]);
+        sum += parseInt(cardNo[i]);
     }
     if (sum < 16) {
         return ({valid: false, number: cardRaw, error: "sum of numbers must be larger than 16"});

@@ -98,14 +98,13 @@ console.log(drEvil(1000000000));
 // fixStart('babble'): 'ba**le'
 
 const fixStart = function (str1){
-    const foundLetters = []
+    const firstLetter = str1[0]
     let outputString = ''
     for (let i = 0; i < str1.length; i++) {
-    if (foundLetters.includes(str1[i])) {
+    if (firstLetter === str1[i]) {
       outputString = outputString+"*";
     } else {
       outputString = outputString + str1[i];
-      foundLetters.push(str1[i])
     }
   }
   return outputString
@@ -125,3 +124,54 @@ console.log(fixStart('im amazing'));
 //   return finalString;
 // };
 // fixStart("howdy you huge hoosiers!");
+
+
+const verbing = function (str) {
+    if (str.endsWith('ing')) {
+      return (str + 'ly');
+    }
+    if (str.length >=3) {
+      return str + 'ing';
+    }
+    else {
+      return str
+    }
+}
+
+console.log(verbing("swimming"));
+console.log(verbing("eat"));
+console.log(verbing("go"));
+
+
+
+// const notBad = function (string) {
+// // find index
+// const not = string.indexOf('not')
+// const bad = string.indexOf('bad')
+// const notBadStr = string.substring(not, bad+3)
+//
+// return  notBadStr
+// //     if (string.includes('not bad')) { //
+// //       for (i = 0, i < string.length, i++ ){
+// //         not < bad;
+// //         return string = string.replace('not bad', 'good');
+// //       }
+// //     } else {
+// //       return string;
+// //     }
+// }
+// console.log(notBad('I really thought dragons were not bad'));
+// console.log(notBad('I really thought dragons were bad'));
+// console.log(notBad('the dinner is not terribly bad'));
+
+function notBad(s){
+  var notIndex = s.indexOf("not");
+  var badIndex = s.indexOf("bad");
+  if(notIndex>= 0 && badIndex>= 0 && badIndex > notIndex){
+    return s.substring(0, notIndex) + "good" + s.substring(badIndex + 3);
+  }   //
+  return s;
+}
+console.log(notBad('This dinner is not that bad is it?'));
+console.log(notBad('This movie is not so bad!'));
+console.log(notBad('This dinner is bad!'))

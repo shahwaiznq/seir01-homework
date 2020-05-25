@@ -3,7 +3,7 @@
 // 1. Define a function `maxOfTwoNumbers` that takes two numbers as arguments and returns the largest of them. Use the if-then-else construct available in Javascript. You'll have to remember your pre-work, or do some googling to figure this out.
 
 
-//solution 2 : practicing having a message as a variable
+//solution 2 : to avoid repeating return message
 const maxOfTwoNumbers = function (a, b) {
   const message = ` is the bigger number between ${ a } and ${ b }.`;
     if ( a < b ) {
@@ -68,11 +68,11 @@ console.log( maxOfThree (100, 1, 10) );
 
 
 //solution 3 : reducing 'l ===' & '||' from solution 2
-const letterDetector = function (g) {
-  const vowel = ['a', 'e', 'i', 'o', 'u'];
-  const l = vowel.includes(g);
+const vowel = ['a', 'e', 'i', 'o', 'u'];
 
-  if ( l === 'true') {
+const letterDetector = function (g) {
+  const l = vowel.includes(g);
+  if ( l ) {
     return 'true';
   } else {
     return 'false';
@@ -80,7 +80,7 @@ const letterDetector = function (g) {
 };
 
 console.log( letterDetector ('t') );
-console.log( letterDetector ('u') ); // why this one is also false??
+console.log( letterDetector ('u') );
 
 /*
 //solution 2 : reducing 'else if'
@@ -122,32 +122,50 @@ console.log( letterDetector ('u') );
 // 4. Define a function `sumArray` and a function `multiplyArray` that sums and multiplies (respectively) all the numbers in an array of numbers. For example, `sumArray([1,2,3,4])` should return 10, and `multiplyArray([1,2,3,4])` should return 24.
 //
 
-//solutino 1 : using loop
-const numberArray = [1, 2, 3, 4];
+// //solution 3 : .reduce
+// const numberArray = [1, 2, 3, 4];
+//
+// const sumArray = numberArray.reduce( function (acc, cur) {
+//   return acc + cur;
+// }
+// )
+// console.log ( sumArray ); //10
+//
+// const multiplyArray = numberArray.reduce( function (acc, cur) {
+//   return acc * cur;
+// }
+// )
+// console.log ( multiplyArray ); //24
 
-let sum = 0;
-for (let h = 0; h < numberArray.length; h++) {
-  sum = sum + numberArray[h];
-}
-console.log(sum);
 
-let multiply = 1
-for (let i = 0; i < numberArray.length; i++) {
-  multiply = multiply * numberArray[i];
-}
-console.log(multiply);
-
-/*
-//solution 2 : refer to MDN - using .reduce // failed to understanddd reduce
+//solution 2 : refer to MDN
 const numberArray = [1, 2, 3, 4];
 const sumArray = function (accumulator, currentValue) {
   return accumulator + currentValue
 };
-console.log( numberArray.reduce(sumArray) );
+// const sumArray = (accumulator, currentValue) => accumulator + currentValue;
+console.log( numberArray.reduce(sumArray) ); //10
 
 const multiplyArray = function (accumulator2, currentValue2) {
   return accumulator2 * currentValue2
 };
 
-console.log( numberArray.reduce(multiplyArray) );
-*/
+console.log( numberArray.reduce(multiplyArray) ); //24
+
+
+// //solution 1 : using loop
+// const numberArray = [1, 2, 3, 4];
+//
+// let sum = 0;
+// for (let h = 0; h < numberArray.length; h++) {
+//   sum += numberArray[h];
+// }
+// console.log(sum); //10
+//
+// let multiply = 1
+// for (let i = 0; i < numberArray.length; i++) {
+//   multiply *= numberArray[i];
+// }
+// console.log(multiply); //24
+
+console.log( '---------------------------------------------');
