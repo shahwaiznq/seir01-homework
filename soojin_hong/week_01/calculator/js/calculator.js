@@ -52,62 +52,10 @@ areaOfCircle(2);
 
 // Calculate what percentage that area is of the squared result (#3).
 
-const calculatorLastBoss = function ( num6 ) {
-  const half = num6 / 2;
-  const square = half * half;
-  const area = Math.PI * square * square;
-  const percentage = Math.round( area / square * 100 );
-  console.log(`It is ${ percentage }% of squared result.`);
-  return area;
-};
+const calculatorFinal = function (n) {
+  const cal1 = areaOfCircle( squareNumber( halfNumber(n) ) )
+  return percentOf( cal1 , squareNumber(cal1) );
+}
 
-calculatorLastBoss(8);
-
-/*
-const calculatorFinal = function ( num7 ) {
-  function halfNumber() {
-    function squareNumber() {
-      function areaOfCircle() {
-        function
-    };
-  };
-};
-};
-
-
-function areaOfCircle() {
-  function squareNumber() {
-    function halfNumber() {
-      console.log()
-    };
-  };
-};
-
-*/
-
-
-/*
-String 1 DrEvil
-const DrEvil = function ( amount ) {
-  if ( amount === 1000000) {
-    console.log(`${ amount } dollars (pinky)`);
-  }else{
-    console.log(`${ amount } dollars`);
-  }
-  return;
-};
-
-DrEvil(10);
-DrEvil(1000000);
-
-
-String 2 MixUp
-const mixUp = function ( word1, word2 ) {
-  const mixing1 = word1.slice(0, 1)+word2.slice(2, 4);
-  const mixing2 = word2.slice(0, 2)+word1,slice(2, 3);
-  return `${ mixing1 }, ${ mixing2 }`
-};
-
-mixUp(lion, tiger); // ligar, tigon
-
-*/
+console.log ( calculatorFinal (2) );
+console.log('---------------------------------------------------');
