@@ -1,0 +1,272 @@
+body {
+  background-image: url('/Users/caleshanley/Projects/seir01-homework/cale_shanley/week_02/html-labs/busyhands/images/bg_body.jpg');
+  position: relative;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.container {
+  width: 960px;
+  margin: 10px auto;
+}
+
+.wrapper {
+  color: white;
+  display: inline-block;
+}
+
+.topbar {
+  background-color: black;
+  padding: 20px 50px;
+  width: 100%;
+}
+
+.topbar li:hover {
+  background-image: url('/Users/caleshanley/Projects/seir01-homework/cale_shanley/week_02/html-labs/busyhands/images/bg_blurb.jpg');
+  height: 100%;
+}
+
+.headings li {
+  font-size: 20px;
+  text-align: left;
+  display: inline-block;
+  color: white;
+  list-style: none;
+  padding-right: 20px;
+}
+
+ol,
+ul {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
+
+.shadow-slider {
+  margin-top: -4px;
+}
+
+.quote {
+  display: flex;
+  align-items: center; /* Vertical Align */
+  justify-content: space-between; /* Horizonal Spacing */
+  background-image: url('/Users/caleshanley/Projects/seir01-homework/cale_shanley/week_02/html-labs/busyhands/images/bg_blurb.jpg');
+  box-shadow: inset 0 0 2px #000000;
+  padding: 5px;
+}
+
+.quote p {
+  max-width: 600px;
+}
+
+.quote-button {
+  float: right;
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  padding: 5px;
+}
+
+.column img {
+  width: 100%;
+}
+
+.column h3 {
+  padding: 5px;
+}
+
+.lines {
+  min-width: 200px;
+}
+
+.lines li {
+  padding: 5px 0;
+  border-bottom: 1px solid white;
+  border-top: 1px solid white;
+}
+
+.lines.no-border li {
+  border-bottom: black;
+}
+
+.copy {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer {
+  display: inline-block;
+  background-color: black;
+  color: white;
+  width: 100%;
+}
+
+/* Social Media */
+
+.socialMedia {
+  float: right;
+}
+
+.socialMedia ul li {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  background: blue;
+  text-indent: -9999em;
+}
+
+.socialMedia ul li.linkedIn {
+  background: url('Users/caleshanley/Projects/seir-01/02-html-css/fixbrokencode/images/socialNav.png')
+    0px 64px;
+}
+.socialMedia ul li.twitter {
+  background: url('/Users/caleshanley/Projects/seir-01/02-html-css/fixbrokencode/images/socialNav.png') -60px
+    64px;
+}
+
+.socialMedia ul li.facebook {
+  background: url('/Users/caleshanley/Projects/seir-01/02-html-css/fixbrokencode/images/socialNav.png') -120px
+    64px;
+}
+
+.socialMedia ul li.rss {
+  background: url('/Users/caleshanley/Projects/seir-01/02-html-css/fixbrokencode/images/socialNav.png') -180px
+    64px;
+}
+
+.socialMedia ul li.linkedIn:hover {
+  background: url('/Users/caleshanley/Projects/seir-01/02-html-css/fixbrokencode/images/socialNav.png')
+    0px 0px;
+}
+
+.socialMedia ul li.twitter:hover {
+  background: url('/Users/caleshanley/Projects/seir-01/02-html-css/fixbrokencode/images/socialNav.png') -60px
+    0px;
+}
+
+.socialMedia ul li.facebook:hover {
+  background: url('/Users/caleshanley/Projects/seir-01/02-html-css/fixbrokencode/images/socialNav.png') -120px
+    0px;
+}
+
+.socialMedia ul li.rss:hover {
+  background: url('/Users/caleshanley/Projects/seir-01/02-html-css/fixbrokencode/images/socialNav.png') -180px
+    0px;
+}
+
+/* Social Media Ended */
+
+/* #container {
+  width: 960px;
+  margin: 10px auto;
+}
+.wrapper {
+  color: white;
+  display: inline-block;
+}
+
+#topbar {
+  background-color: black;
+  padding: 20px 50px;
+}
+
+#topbar:hover {
+  background-image: url('/Users/caleshanley/Projects/seir01-homework/cale_shanley/week_02/html-labs/busyhands/images/bg_nav_rollover.png');
+}
+
+.headings li {
+  font-size: 20px;
+  text-align: left;
+  display: inline-block;
+  color: white;
+  list-style: none;
+  padding-right: 20px;
+}
+
+ol,
+ul {
+  list-style: none; /* Removes the * on the nav bar */
+/* padding: 0;  */
+/* }
+
+body {
+  background-image: url('/Users/caleshanley/Projects/seir01-homework/cale_shanley/week_02/html-labs/busyhands/images/bg_body.jpg');
+  position: relative;
+}
+
+#quote {
+  width: 60%;
+  display: inline-block;
+  background-image: url('/Users/caleshanley/Projects/seir01-homework/cale_shanley/week_02/html-labs/busyhands/images/bg_blurb.jpg');
+}
+
+#quote-button {
+  float: right;
+}
+
+.home-box {
+  width: 100px;
+  text-align: center;
+  display: inline-block;
+  margin-bottom: 1px;
+  height: 200px;
+  padding: 20px;
+  padding-top: 20px; */
+/* } */
+
+/* footer {
+  display: inline-block;
+  background-color: black;
+  color: white;
+} */
+
+/* Social Media */
+
+/* #socialMedia {
+  float: right;
+}
+
+#socialMedia ul li {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  background: blue;
+  text-indent: -9999em;
+}
+
+#socialMedia ul li.linkedIn {
+  background: url(../images/socialNav.png) 0px 64px;
+}
+#socialMedia ul li.twitter {
+  background: url(../images/socialNav.png) -60px 64px;
+}
+
+#socialMedia ul li.facebook {
+  background: url(../images/socialNav.png) -120px 64px;
+}
+
+#socialMedia ul li.rss {
+  background: url(../images/socialNav.png) -180px 64px;
+}
+
+#socialMedia ul li.linkedIn:hover {
+  background: url(../images/socialNav.png) 0px 0px;
+}
+
+#socialMedia ul li.twitter:hover {
+  background: url(../images/socialNav.png) -60px 0px;
+}
+
+#socialMedia ul li.facebook:hover {
+  background: url(../images/socialNav.png) -120px 0px;
+}
+
+#socialMedia ul li.rss:hover {
+  background: url(../images/socialNav.png) -180px 0px;
+} */
+
+/* Social Media Ended */
