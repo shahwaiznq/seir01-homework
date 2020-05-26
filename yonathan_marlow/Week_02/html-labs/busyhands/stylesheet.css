@@ -1,0 +1,82 @@
+body {
+  width: 960px;
+  margin: 20px auto;
+}
+
+#topbar {
+  background-color: black;
+  padding: 20px 50px;
+}
+
+.headings li{
+  text-align: left;
+  display: inline-block;
+  color: white;
+  list-style: none;
+  padding-right: 20px;
+}
+
+.sociallinks {
+  text-align: left;
+  display: flex;
+  color: white;
+  list-style: none;
+  padding-right: 20px;
+}
+
+#busyhands {
+  display: inline-block;
+  width: 60%;
+}
+
+
+#socialMedia {
+  display: inline-block;
+  width: 20%;
+  position: right;
+}
+
+#socialMedia li {
+  display: inline-block;
+  margin: auto;
+  text-align: right;
+}
+
+.reqQuote {
+  display: flex;
+}
+
+.quote img{
+  position: right;
+  position: relative;
+  float: right;
+}
+.homebox div {
+  width: 33%;
+  display: inline-block;
+}
+
+
+footer {
+  padding: 25px 20px;
+  background-color: black;
+  color: white;
+  width: 100%;
+  color: grey;
+}
+
+footer h1 {
+  color: white;
+}
+
+.column {
+width: 33%;
+list-style: none;
+display: inline-block;
+vertical-align: top;
+}
+
+.column li{
+  list-style: none;
+  padding: 2px;
+}
