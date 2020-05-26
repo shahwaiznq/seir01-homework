@@ -1,0 +1,46 @@
+/*
+
+## Style Hints:
+
+Body Font Size = 12px
+	 Line Height = 17px
+	 Font Family = "Times New Roman", serif
+	 Font Color = #656565
+
+Link Hover Color = #20222a
+
+*/
+
+body{
+  width: 950px;
+  margin: 0 auto;;
+  padding: 0;
+  font-size: 12px;
+  line-height: 17px;
+  font-family: "Times New Roman", serif;
+  color: #656565;
+}
+
+h3{
+  font-size: 35px;
+  display: inline-block;
+  margin: 0;
+  padding: 20px 0;
+}
+
+p{
+  margin: 0 0 15px 0;
+}
+
+a{
+  text-decoration: none;
+  color: blue;
+}
+
+a:hover{
+  color: #20222a;
+}
+
+.presslogo{
+  border: solid #cecece 5px;
+}

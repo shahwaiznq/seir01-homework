@@ -1,0 +1,257 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: inherit, sans-serif;
+  color: inherit;
+  font-size: 13px;
+  line-height: normal;
+  background: #FFF;
+}
+
+
+#container {
+  width: 75%;
+  margin: 0 auto;
+}
+
+#navigation {
+  margin: 0;
+  padding: 0;
+}
+
+.directions {
+  margin: 0;
+  padding: 20px 30px 20px 0;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  color: #FFF;
+  background-color: #000000;
+}
+.directions li {
+  margin: 5px 10px 5px 10px;
+  padding: 0;
+  list-style: none;
+  font-style: normal;
+}
+.directions li a {
+  text-decoration: none;
+  color: white;
+  font-size: 13px;
+}
+
+.directions a:link { }
+.directions a:visited { }
+.directions a:hover {
+  background:url(../images/bg_nav_rollover.png) -120px 0px;
+  background-size: 25px 25px;
+  background-size: 50% 50%;
+}
+
+.directions a:active { }
+
+
+#header {
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+
+#socialMedia ul {
+  clear: right;
+}
+
+#socialMedia ul li {
+  display: inline-block;
+  width: 60px;
+  height:60px;
+	background:blue;
+	text-indent:-9999em;
+}
+
+#socialMedia ul li.linkedIn {
+	background:url(../images/socialNav.png) 0px 64px;
+}
+#socialMedia ul li.twitter {
+	background:url(../images/socialNav.png) -60px 64px;
+}
+
+#socialMedia ul li.facebook {
+	background:url(../images/socialNav.png) -120px 64px;
+}
+
+#socialMedia ul li.rss {
+	background:url(../images/socialNav.png) -180px 64px;
+}
+
+
+
+#socialMedia ul li.linkedIn:hover {
+	background:url(../images/socialNav.png) 0px 0px;
+}
+
+#socialMedia ul li.twitter:hover {
+	background:url(../images/socialNav.png) -60px 0px;
+}
+
+#socialMedia ul li.facebook:hover {
+	background:url(../images/socialNav.png) -120px 0px;
+}
+
+#socialMedia ul li.rss:hover {
+	background:url(../images/socialNav.png) -180px 0px;
+}
+
+
+.photobanner {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+
+p.text {
+  margin: 10px auto;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  font-size: 18px;
+  border-top: 1px solid #979797;
+  border-left: 1px solid #979797;
+  border-bottom: 1px solid white;
+  border-right: 1px solid #white;
+  background-color: #d4d0d030;
+}
+
+
+.box {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: stretch;
+}
+.box li {
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  list-style: none;
+}
+.box li h3 {
+  margin: 0;
+  font-size: 24px;
+}
+.box li img {
+  margin: 10px 40px 0 0;
+  border: 5px solid #dddddd99;
+}
+.box li p {
+  margin: 10px 40px 0 0;
+  font-size: 13px;
+}
+.box li a {
+  margin: 15px 0 0 0;
+  text-decoration: none;
+  color: blue;
+}
+.box a:link { }
+.box a:visited { }
+.box a:hover { }
+.box a:active { }
+
+#footer {
+  margin: 20px auto;
+  padding: 20px;
+  background-color: black;
+  color: grey;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.blogroll {
+  margin: 0 20px 0 0;
+  padding: 0;
+  width: 90%;
+  max-width: 200px;
+  display: flex;
+  flex-direction: column;
+}
+.blogroll h4 {
+  margin: 0;
+  padding: 0 0 10px 0;
+  font-size: 18px;
+  color: white;
+  border-bottom: 0.5px solid grey;
+}
+.blogroll ul {
+  margin: 0;
+  padding: 0;
+}
+.blogroll li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  color: grey;
+  line-height: 3;
+  border-bottom: 0.5px solid grey;
+}
+
+
+.textWidget {
+  margin: 0 20px 0 0;
+  padding: 0;
+  width: 90%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+}
+.textWidget h4 {
+  margin: 0;
+  padding: 0 0 10px 0;
+  font-size: 18px;
+  color: white;
+  border-bottom: 0.5px solid grey;
+}
+.textWidget p {
+  margin: 0;
+  padding: 0;
+}
+
+
+.metaWidget {
+  margin: 0 20px 0 0;
+  width: 90%;
+  max-width: 200px;
+  display: flex;
+  flex-direction: column;
+}
+.metaWidget h4 {
+  margin: 0;
+  padding: 0 0 10px 0;
+  font-size: 18px;
+  color: white;
+  border-bottom: 0.5px solid grey;
+}
+.metaWidget ul {
+  margin: 0;
+  padding: 0;
+}
+.metaWidget li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  color: grey;
+  line-height: 3;
+  border-bottom: 0.5px solid grey;
+}
