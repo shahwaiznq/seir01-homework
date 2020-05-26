@@ -1,0 +1,188 @@
+* {
+  margin: 0;
+  padding: 25px;
+  box-sizing: border-box;
+}
+
+.header {
+  margin: -60px;
+  padding: 35px;
+  background: black;
+  color: white;
+  font-size: 17px;
+  line-height: 17px;
+  font-family: "Arial", serif;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* Nav hover */
+
+
+.header ul li.home:hover {
+	background:url(/Users/alex/Projects/seir01-homework/alex_maunder/week_02/html-labs/busyhands/images/bg_nav_rollover.png) 0px 0px;
+}
+
+.header ul li.about:hover {
+	background:url(/Users/alex/Projects/seir01-homework/alex_maunder/week_02/html-labs/busyhands/images/bg_nav_rollover.png) -60px 0px;
+}
+
+.header ul li.service:hover {
+	background:url(/Users/alex/Projects/seir01-homework/alex_maunder/week_02/html-labs/busyhands/images/bg_nav_rollover.png) -120px 0px;
+}
+
+.header ul li.blog:hover {
+	background:url(/Users/alex/Projects/seir01-homework/alex_maunder/week_02/html-labs/busyhands/images/bg_nav_rollover.png) -180px 0px;
+}
+
+.header ul li.contactus:hover {
+	background:url(/Users/alex/Projects/seir01-homework/alex_maunder/week_02/html-labs/busyhands/images/bg_nav_rollover.png) -180px 0px;
+}
+
+/* ----- */
+
+.container {
+  font-size: 12px;
+	line-height: 17px;
+	font-family: "Times New Roman", serif;
+	color: #656565;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  display: inline;
+  padding: 20px;
+}
+
+img {
+
+}
+
+#topimg {
+  padding: 20px;
+}
+
+#busyhands {
+  display: inline;
+  float: left;
+  padding-left: 0;
+}
+
+/* Social Media */
+
+#socialMedia {
+	float: right;
+  padding-top: 0;
+}
+
+#socialMedia ul {
+    padding-top: 0;
+}
+
+#socialMedia ul li {
+	 display:inline-block;
+	 width:60px;
+	 height:60px;
+	 background:blue;
+	 text-indent:-9999em;
+   padding-top: 0;
+}
+
+#socialMedia ul li.linkedIn {
+	background:url(/Users/alex/Projects/seir01-homework/alex_maunder/week_02/html-labs/busyhands/images/socialNav.png) 0px 64px;
+}
+#socialMedia ul li.twitter {
+	background:url(/Users/alex/Projects/seir01-homework/alex_maunder/week_02/html-labs/busyhands/images/socialNav.png) -60px 64px;
+}
+
+#socialMedia ul li.facebook {
+	background:url(/Users/alex/Projects/seir01-homework/alex_maunder/week_02/html-labs/busyhands/images/socialNav.png) -120px 64px;
+}
+
+#socialMedia ul li.rss {
+	background:url(/Users/alex/Projects/seir01-homework/alex_maunder/week_02/html-labs/busyhands/images/socialNav.png) -180px 64px;
+}
+
+
+
+#socialMedia ul li.linkedIn:hover {
+	background:url(/Users/alex/Projects/seir01-homework/alex_maunder/week_02/html-labs/busyhands/images/socialNav.png) 0px 0px;
+}
+
+#socialMedia ul li.twitter:hover {
+	background:url(/Users/alex/Projects/seir01-homework/alex_maunder/week_02/html-labs/busyhands/images/socialNav.png) -60px 0px;
+}
+
+#socialMedia ul li.facebook:hover {
+	background:url(/Users/alex/Projects/seir01-homework/alex_maunder/week_02/html-labs/busyhands/images/socialNav.png) -120px 0px;
+}
+
+#socialMedia ul li.rss:hover {
+	background:url(/Users/alex/Projects/seir01-homework/alex_maunder/week_02/html-labs/busyhands/images/socialNav.png) -180px 0px;
+}
+
+/* ------ */
+
+#photobanner {
+  display: inline;
+  float: left;
+  padding: 5px;
+  width: 95%;
+}
+
+#shadow {
+  margin: -35px;
+  padding: 25px;
+  width: 95%;
+}
+
+#border {
+  border-style: inset;
+}
+
+#border img {
+  float: right;
+  position: relative;
+  padding-top: 0px;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+#head3 {
+  font-size: 25px;
+  float: left;
+  position: relative;
+  padding-left: 3px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.row img {
+  border: 5px solid #b3b3b3;
+  padding: 2px;
+}
+
+.row p {
+  position: relative;
+  padding-left: 3px;
+  padding-right: 3px;
+  padding-bottom: 10px;
+}
+
+#readmore {
+  padding-left: 3px;
+  padding-top: 0;
+  text-decoration: none;
+}

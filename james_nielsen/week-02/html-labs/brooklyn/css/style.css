@@ -1,0 +1,63 @@
+
+#container {
+  width: 960px;
+  margin: 10px auto;
+  color: #656565;
+}
+.h1 {
+  font-size: 48px;
+  line-height: 20px;
+  font-family: "Times New Roman", serif;
+  letter-spacing: 2px;
+  color: #656565;
+  margin-top:50px;
+}
+
+.picture {
+ margin: 0px;
+ border: 0px;
+ padding:0px;
+}
+
+.media {
+  width: 960px;
+  margin: 10px auto;
+}
+
+.media img {
+  box-sizing: border-box;
+  border:5px solid #b5b5b5;
+}
+
+.h2 {
+  font-size: 20px;
+  font-family: "Times New Roman", serif;
+}
+
+.date {
+  font-family: "Times New Roman", serif;
+  color: blue;
+  border:0px;
+  padding:0px;
+  margin:0px;
+}
+
+.pagestyle {
+    font-size: 12px;
+  	line-height: 20px;
+  	font-family: "Times New Roman", serif;
+    letter-spacing: 1px;
+  	color: #656565;
+    border:0px;
+    padding:0px;
+    margin:0px;
+   }
+
+.hover {
+  text-decoration: none;
+  color: blue
+}
+
+a:hover {
+    color: #20222a
+}
