@@ -1,0 +1,26 @@
+body {
+  background-color: aliceblue;
+}
+
+h1 {
+  padding: 35px;
+  margin-top: 120px;
+  text-align: right;
+}
+
+a {
+  color: pink;
+}
+
+h1, h2, h3, h4, h5 {
+  background-color: white;
+  text-align: center;
+  text-shadow: 0 0 5px red;
+}
+
+p.fancy{
+  font-style: italic;
+  color: pink;
+  font-size: normal;
+
+}
