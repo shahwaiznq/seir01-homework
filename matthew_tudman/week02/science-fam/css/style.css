@@ -1,0 +1,127 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo&family=Quintessential&display=swap');
+
+
+* {vertical-align: top;}
+
+body {
+  background-image: url("../images/background.jpg");
+  background-size: cover;
+  padding: 0em;
+  margin: 0;
+}
+
+
+.container {
+  background-image: url("../images/gray-linen-canvas-texture_1194-5659.jpg");
+  box-shadow: 1px 1px 10px;
+  background-color: #eees;
+  max-width: 900px;
+  margin: auto;
+  padding: 3em;
+}
+
+
+img {
+  max-width: 38%;
+  box-shadow: 0px 0px 15px;
+  display: inline-block;
+  margin-top: 1em;
+  border-radius: 5em;
+  border-width: medium;
+  border-color: #cccccc;
+  border-style: solid;
+  background-color: #fff;
+}
+
+nav {
+  text-align: right;
+  font-size: 20px;
+}
+
+main {
+  padding: 4em;
+  padding-top: 0em;
+  min-height: 1100px;
+}
+
+
+a {
+  color: #606;
+  font-family: 'Quintessential', cursive;
+  text-decoration: none;
+}
+
+p {
+  max-width: 50%;
+  display: inline-block;
+  font-family: 'Cairo', sans-serif;
+  background-color: #ccc;
+  border-radius: 1%;
+  padding: 15px;
+  box-shadow: 0px 0px 5px;
+  vertical-align: top;
+}
+
+h1 {
+  font-family: 'Quintessential', cursive;
+  font-size: 3.3em;
+  color: #909;
+  padding-left: 0.5em;
+  text-shadow: 1px 1px black;
+}
+
+h2 {
+  margin: 0em;
+  font-family: 'Quintessential', cursive;
+  font-size: 2.3em;
+  padding-bottom: 0.5em;
+}
+
+
+header {
+  border-radius: 10px;
+  padding: 4px;
+  margin: 5px;
+}
+
+#erinyes {
+  margin-left: 0em;
+  margin-right: 3em;
+}
+
+#comp {
+  border-radius: 6px;
+  margin-left: 2em;
+  max-width: 55%;
+}
+
+#tight {
+  max-width: 35%
+}
+
+#portrait {
+  margin-left: 3em;
+}
+
+#blockline {
+  display: inline-block;
+  margin-left: 2em;
+}
+#quote {
+  font-style: italic;
+  max-width: 90%;
+  margin-top: 2em;
+}
+
+#moveRight {
+  margin-left: 2em;
+  max-width: 52%;
+}
+
+#ada {
+  border-radius: 6px;
+  border
+}
+
+/**/
