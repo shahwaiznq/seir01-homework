@@ -1,0 +1,105 @@
+/* *{  border: 1px solid red;
+  box-sizing: border-box;
+} */
+@import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
+
+.container {
+  /* width 960ps;  */
+  max-width: 800px; /* max-width is often better - makes it responsive */
+  background-color:  #ccc;
+  margin: auto; /* horizontal centering also margin: 0 auto; */
+  padding: 2em; /* you could use pixels, ems are the width of "m"*/
+  border-bottom-left-radius: 1em;
+  border-bottom-right-radius: 1em;
+  font-family: "Arvo", serif;
+}
+
+h1 a {
+  font-size: xxx-large;
+  color: black;
+  text-decoration: none;
+}
+
+header {
+  display: inline-block;
+  width: 50%;
+
+}
+
+div h3 {
+  margin: 20px 0px -10px 0;
+}
+
+img {
+  text-align: center;
+  margin: 2em auto;
+  width: 95%;
+  display: block;
+  padding: 0em;
+  box-shadow: 2px 2px 4px black;
+}
+
+nav {
+  display: inline-block;
+  vertical-align: top;
+  width: 45%;
+  text-align: right;
+  word-spacing: 5px;
+  font-size: 12px;
+}
+
+.content {
+  margin: auto;
+  margin-bottom: 3em;
+}
+
+nav.top a{
+  color: gray;
+  text-decoration: none;
+}
+
+nav.top a:hover {
+  text-shadow: 0px 0px 5px gray;
+  font-size: 13px;
+  color: lightgray;
+}
+
+p {
+  font-size: small;
+}
+
+.socials {
+  text-align: center;
+  width: 100%;
+  word-spacing: 3em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  background-color: papayawhip;
+  color: lightgray;
+}
+
+nav.socials a {
+  color: #204030;
+  text-decoration: none;
+}
+
+nav.socials a:hover {
+  font-style: italic;
+  transition: 2s all;
+}
+
+aside {
+  font-style: italic;
+  color: rgba(0, 0, 0, 0);
+  width: 40%;
+  padding-left: 4em;
+  font-size: 13px;
+  margin-top: -20em;
+  margin-bottom: 15em;
+}
+
+.invisible:hover {
+
+  transition: 2s all;
+  color: black;
+}
