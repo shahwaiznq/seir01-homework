@@ -1,0 +1,125 @@
+body {
+    text-align: center;
+    margin: 0;
+}
+#container {
+    text-align: left;
+    width: 900px;
+    display: inline-block;
+    position: relative;
+}
+
+/* button {
+    display: inline-block;
+} */
+/* div.header {
+    width: 900;
+} */
+
+
+.headerContainer{
+    background-color: black;
+    width: 100%;
+    text-align: center;
+}
+
+.header{
+    background-color: black;
+    width: 900px;
+    left: 0;
+    right:100%;
+    display: inline-block;
+    text-align: left;
+}
+
+.myButton{
+    color: white;
+    border: none;
+    height: 77px;
+    padding: 0 15px 0 15px;
+    background-color: black;
+    font-weight:600;
+}
+
+.myButton:hover{
+    background-image: url("../images/bg_nav_rollover.png");
+    color: rgb(71, 159, 194);
+    border: none;
+    font-weight: 600;
+    height: 77px;
+}
+
+.logoAndSocials{
+    padding: 30px 0 20px;
+}
+
+.leftImage{
+    /* display: inline-block; */
+}
+
+.socials {
+    position: absolute;    
+    right: 0;    
+    display: inline-block;
+
+}
+
+.mainImage img{
+    padding-top: 9px;
+    width: 900px;
+}
+
+.quoteBox{
+    padding: 20px;
+    border: 1px solid;
+    box-shadow: 5px 10px;
+
+}
+
+.quoteBox p{
+    width: 600px;
+    display: inline-block;
+}
+.quoteBox img{
+    display: inline-block;
+    position: relative;
+    left: 60px;
+    bottom: 15px;
+}
+
+.thirdBox{
+    /* width: 297px; */
+    width:33%;
+    display: inline-block;
+    margin-top: 10px;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+.thirdBox img {
+    width
+}
+
+.thirdBox p , .thirdBox a{
+    font-size: 0.8rem;
+}
+
+.thirdBox a{
+    color: rgb(71, 159, 194);
+    text-decoration: none;
+}
+
+.footerContainer{
+    background-color: black;
+    text-align: center;
+    width: 100%;
+    bottom: 0%;
+
+    
+}
+.footer{
+    width: 900px;
+    color: white;
+    left: 0;
+    right:100%;
+}

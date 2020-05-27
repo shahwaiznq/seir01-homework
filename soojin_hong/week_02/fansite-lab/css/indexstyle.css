@@ -1,0 +1,37 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300&family=Merriweather:wght@300&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0f132f;
+  font-family: 'Hind Siliguri', sans-serif;
+}
+
+.container {
+  width : 960px;
+  margin: 0 auto;
+  padding: 1em;
+}
+
+nav {
+  text-align: right;
+}
+
+nav ul {
+  padding: 0;
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  padding: 9px;
+}
+
+img {
+  margin: 0 auto;
+  display: block;
+  height: 600px;
+}

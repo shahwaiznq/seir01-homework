@@ -1,0 +1,151 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300&family=Source+Code+Pro:wght@300;600&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0 auto;
+    /* text-align: center; */
+}
+article{
+    padding: 30px;
+}
+.container{
+    margin: 0 auto;
+    padding-bottom: 200px;
+}
+
+h1,  h2, h3, h4, h5{
+    color: grey;
+    font-family: 'Source Code Pro', monospace;
+}
+p{
+    font-family: 'Libre Franklin', sans-serif;}
+header h1{
+    font-family: 'Press Start 2P', cursive;
+    color: greenyellow;
+}
+
+
+main, article{
+    width: 70%;
+    margin: 0 auto;
+}
+
+
+
+header, footer{
+    /* margin: 0 auto; */
+    color: white;
+    background-color: black;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+}
+
+
+
+footer{
+    margin-top: auto;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+header img, header h1, header nav{
+    display: inline-block;
+}
+
+
+img.logo{
+    position: absolute;
+    left: 80%;
+    margin-top: 20px;
+}
+
+a{
+    color: lightskyblue;
+    text-decoration: none;
+    margin-left: 2rem;
+    padding: 10px;
+
+
+}
+a.nav-link:hover{
+    color: black;
+    background-color: lightskyblue;
+    text-decoration: none;
+    margin-left: 2rem;
+    padding: auto 10px auto 10px;
+    border-radius: 10%;
+
+    
+}
+
+
+.third-col{
+    width: 25%;
+    display: inline-block;
+    align-items: center;
+    text-align: center;
+}
+ul{
+    text-align: left;
+    display: inline-block;
+}
+
+div.copywrite p{
+    font-size: 0.7em;
+    display: inline-block;
+    margin: 0 10% 0 10%;
+}
+
+
+article.publication{
+    width: 100%;
+}
+
+article.publication section{
+    width:70%;
+    vertical-align: top;
+    display: inline-block;
+    
+}
+article.publication aside{
+    width:19%;
+    vertical-align: top;
+    display: inline-block;
+    margin-left: 10%;
+}
+
+.centering {
+text-align: center;
+}
+.small-img{
+    width: 4em;
+    left: 50%;
+}
+img.example{
+    height: 100px;
+    float: left;
+    border-radius: 20%;
+    position: relative;
+    bottom: 20px;
+    right: 15px;
+}
+img.example.right{
+    float: right;
+    left: 15px;
+}
+
+.centering article{
+    width: 100%;
+}
+
+div.centering article{
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
