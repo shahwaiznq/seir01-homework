@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans:wght@300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans:wght@300&family=Pacifico&display=swap');
+
+body {
+  background-color: white;
+  padding: 0;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+  max-width: 960px; /* REVIEW: Lazy responsive container */
+  background-color: #021e6d;
+  margin: auto;
+  padding: 1em;
+  border-bottom-left-radius: 1em;
+  border-bottom-right-radius: 1em;
+}
+
+/* HEADER */
+
+h1 {
+  text-align: center;
+  color: white;
+  padding: 0.5em;
+  margin: 0 auto;
+  font-family: 'Pacifico', cursive;
+  font-size: 32px;
+}
+
+header img {
+  margin: auto;
+  text-align: center;
+  max-width: 960px;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  background-color: #dfd9cd;
+  height: 5em;
+  border-top-left-radius: 5em;
+  border-bottom-right-radius: 2em;
+  border:ridge;
+}
+
+ul.nav {
+  display: flex;
+  flex-direction: row;
+  width: 60%;
+  list-style: none;
+  padding: 20px 0;
+  font-weight: 600;
+}
+
+ul.nav li a {
+  text-decoration: none;
+  color: black;
+  margin: 0 2em;
+  padding: 0 0.2em;
+  font-weight: 600;
+}
+
+ul.nav li a:hover {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 0 0.2em;
+  border-left: 0.2em solid black;
+  border-right: 0.2em solid black;
+  border-radius: 0.5em;
+}
+
+ul.mediaicons li {
+	 display:inline-block;
+	 width:60px;
+	 height:60px;
+	 background:blue;
+	 text-indent:-9999em;
+}
+
+header ul li.linkedIn {
+	background:url(../images/socialNav.png) 0px 64px;
+}
+header ul li.twitter {
+	background:url(../images/socialNav.png) -60px 64px;
+}
+
+header ul li.facebook {
+	background:url(../images/socialNav.png) -120px 64px;
+}
+
+header ul li.rss {
+	background:url(../images/socialNav.png) -180px 64px;
+}
+
+
+
+header ul li.linkedIn:hover {
+	background:url(../images/socialNav.png) 0px 0px;
+}
+
+header ul li.twitter:hover {
+	background:url(../images/socialNav.png) -60px 0px;
+}
+
+header ul li.facebook:hover {
+	background:url(../images/socialNav.png) -120px 0px;
+}
+
+header ul li.rss:hover {
+	background:url(../images/socialNav.png) -180px 0px;
+}
+
+
+
+/* MAIN */
+main {
+  display: inline-block;
+  padding-left: 1em;
+}
+
+.biography {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 2em auto;
+}
+
+.biography p {
+  color: white;
+  margin: 2em;
+  padding: 2em;
+  line-height: 2;
+  font-size: 18px;
+  border-top: 0.2em dotted white;
+  border-bottom: 0.2em dotted white;
+}
+
+.biography img {
+  max-width: 16em;
+  margin: 2em 4em;
+  border: 1em solid white;
+  border-radius: 1em;
+}
+
+.video {
+  text-align: center;
+  margin: 5em auto;
+}
+
+.video p {
+  color: white;
+  font-size: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+.video iframe{
+  text-align: center;
+  margin: 2em;
+}
