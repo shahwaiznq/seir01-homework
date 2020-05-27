@@ -40,9 +40,11 @@ const createCat = function () {
     // moveImg(cat.id);
 
     cat.addEventListener('click', function () {
-        clearInterval(String(cat.id));
+        // clearInterval(String(cat.id));
+        clearInterval(timerId);
+        // clearInterval(cat.id);
         crushCounter += 1;
-        if (crushCounter < 7) {
+        if (crushCounter < 5) {
             cat.src = 'confetti.gif';
         } else {
             cat.src = 'bloodsplatter.gif';
