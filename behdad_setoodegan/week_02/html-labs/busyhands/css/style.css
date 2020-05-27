@@ -1,0 +1,131 @@
+
+body{
+	background-image: url("../images/Untitled.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+#logo{
+	position: absolute;
+}
+
+nav{
+	color: white;
+	background-color: black;
+	height: 50px;
+}
+.navbox{
+	padding-top: 20px;
+	padding-left: 400px;
+}
+header{
+	padding-top: 20px;
+}
+#topimg{
+	box-shadow: 0 80px 60px -60px black;
+}
+
+#container {
+		
+	width: 950px;
+	margin: 0 auto; /*centers our container on the page */   
+}
+.horizental{
+	display: inline-flex;
+	padding-bottom: 30px;
+}
+.clearfixx{
+	margin-top: 60px;
+	display: inline-block;
+	border-style: inset;
+	overflow: auto;
+}
+.box{
+	padding-left: 30px;
+}
+
+.boximg{
+	border: 5px solid rgb(211, 211, 211);
+	padding: 2px;
+}
+
+.img2{
+	float: right;
+	padding: 20px;
+}
+
+.clarifixtxt{
+	padding-left: 20px;
+}
+
+
+#navi{
+	color: white;
+	text-decoration: none;
+	padding:15px;
+}
+#navi:hover{
+	background-image: url("images/bg_nav_rollover.png");
+	
+}
+
+#socialMedia {
+	float: right;
+}
+
+#socialMedia ul li {
+	 display:inline-block;
+	 width:60px;
+	 height:60px;
+	 background:blue;	
+	 text-indent:-9999em;
+}
+
+footer{
+	color: white;
+	background-color: black;
+	display: inline-flex;
+	padding-top: 40px;
+	padding-left: 400px;
+	padding-right: 400px;
+}
+h4{
+	border-top: 1px solid #bbb;
+	padding-top: 10px;
+	color: gray;
+}
+
+
+
+
+#socialMedia ul li.linkedIn {
+	background:url(../images/socialNav.png) 0px 64px;
+}
+#socialMedia ul li.twitter {
+	background:url(../images/socialNav.png) -60px 64px; 
+}
+
+#socialMedia ul li.facebook {
+	background:url(../images/socialNav.png) -120px 64px; 
+}
+
+#socialMedia ul li.rss {
+	background:url(../images/socialNav.png) -180px 64px; 
+}
+
+
+
+#socialMedia ul li.linkedIn:hover {
+	background:url(../images/socialNav.png) 0px 0px; 
+}
+
+#socialMedia ul li.twitter:hover {
+	background:url(../images/socialNav.png) -60px 0px; 
+}
+
+#socialMedia ul li.facebook:hover {
+	background:url(../images/socialNav.png) -120px 0px; 
+}
+
+#socialMedia ul li.rss:hover {
+	background:url(../images/socialNav.png) -180px 0px; 
+}
