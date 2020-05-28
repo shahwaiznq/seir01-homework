@@ -30,7 +30,7 @@ header h1{
 }
 
 
-main, article{
+main, article{ 
     width: 70%;
     margin: 0 auto;
 }
