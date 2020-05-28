@@ -74,32 +74,30 @@
 //second shitty attampt at goal #2 using 2 functions
 
 const cat = document.querySelector('img');
-cat.style.position = 'left';
-cat.style.left = '0px';
 const w = window.innerWidth;
 const wInt = parseInt(w);
-
+cat.style.position = 'left';
+cat.style.left = '0px';
 let check = true;
 // let counter
 
 const catWalk = function(){
   let oldPosition = parseInt(cat.style.left);
   if (check){
+    cat.style.transform = "scaleX(+1)"
     let newPosition = oldPosition + 10;
     let negativePosition = oldPosition - 10;
     if (newPosition < (w-296) && oldPosition >= -10){     // not yet reached wall
       cat.style.left = newPosition + 'px';
-    // positionArray[0] = oldPosition;
-    // positionArray[1] = newPosition;
     } else {
       negativePosition = oldPosition - 10;
       cat.style.left = negativePosition + 'px';
       check = false;
-    // oldPosition += 20;
     }
   } else if (oldPosition > 0){
     negativePosition = oldPosition - 10;
     cat.style.left = negativePosition + 'px';
+    cat.style.transform = "scaleX(-1)"
   } else {
     check = true;
   }
