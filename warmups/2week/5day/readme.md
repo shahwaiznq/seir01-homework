@@ -16,4 +16,4 @@ A string `please help, this is boring` becomes `qmfbtf ifmq, uijt jt cpsjoh`.
 ## Hint
 
 _Don't read if you want some challenge_
-Have a look at converting characters to ASCII numbers.
+Have a look at converting characters to ASCII numbers
