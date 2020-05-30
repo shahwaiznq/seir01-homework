@@ -1,73 +1,104 @@
 $(document).ready(function(){
 
-//CHECKING
-let $checkingBalance = 0;
 
-$('input#checking-deposit').on('click', function(){
-  const $input = parseInt($('input#checking-amount').val());
-  $checkingBalance += $input;
-  if ($checkingBalance > 0){
-    $('div#checking-balance').css('background-color', '#E3E3E3')
+  const colorCheck = function(){
+    if (checkBalance() === 0){
+      $('#checking-balance').css('background-color', 'red');
+    }
+    if (checkBalance() !== 0){
+      $('#checking-balance').css('background-color', '#E3E3E3');
+    }
+    if (savingsBalance() === 0){
+      $('#savings-balance').css('background-color', 'red');
+    }
+    if (savingsBalance() !== 0){
+      $('#savings-balance').css('background-color', '#E3E3E3');
+    }
   }
-  $('div#checking-balance').text(`$${$checkingBalance}`);
-})
 
 
-$('input#checking-withdraw').on('click', function(){
-  const $input = parseInt($('input#checking-amount').val());
-  $checkingBalance -= $input;
-  if ($checkingBalance < 0){
-    $checkingBalance += $input;
-    alert("You can't have a negative balance")
-    //it would be cool to spin the div 360 here
-  }
-  if ($checkingBalance === 0){
-    $('div#checking-balance').css('background-color', 'red');
-  }
-  $('div#checking-balance').text(`$${$checkingBalance}`);
-})
+  const checkBalance = function(){
+    return parseFloat($('#checking-balance').text().slice(1));
+  };
 
 
+  const checkDeposit = function(){
+    return parseFloat($('#checking-amount').val()) + checkBalance();
+  };
 
 
+  const checkWithdraw = function(amount){
+    if (checkBalance() >= amount){
+      return checkBalance() - amount;
+    } else {
+        if (checkBalance() < amount){
+          if ((checkBalance() + savingsBalance()) < amount){
+            alert ("insufficient funds")
+            return checkBalance();
+          } else {
+            alert ("you've overdrafted your account");
+            let currentBalance = checkBalance();
+            let overdraft = amount - currentBalance;
+            $('div #savings-balance').text(`$${savingsWithdraw(overdraft)}`);
+            return checkBalance() - currentBalance;
+          }
+        }
+    }
+  };
 
 
+  $('#checking-deposit').click(function(){
+    $('div #checking-balance').text(`$${checkDeposit()}`);
+    colorCheck();
+  });
+
+  $('#checking-withdraw').click(function(){
+    $('div #checking-balance').text(`$${checkWithdraw(parseFloat($('#checking-amount').val()))}`);
+    colorCheck();
+  });
 
 
-
-//SAVINGS
-let $savingsBalance = 0;
-
-$('input#savings-deposit').on('click', function(){
-  const $input = parseInt($('input#savings-amount').val());
-  $savingsBalance += $input;
-  if ($savingsBalance > 0){
-    $('div#savings-balance').css('background-color', '#E3E3E3')
-  }
-  $('div#savings-balance').text(`$${$savingsBalance}`);
-})
+  //SAVINGS
+  const savingsBalance = function(){
+    return parseFloat($('#savings-balance').text().slice(1));
+  };
 
 
-
-$('input#savings-withdraw').on('click', function(){
-  const $input = parseInt($('input#savings-amount').val());
-  $savingsBalance -= $input;
-  if ($savingsBalance < 0){
-    $savingsBalance += $input;
-    alert("You can't have a negative balance")
-    //it would be cool to spin the div 360 here
-  }
-  if ($savingsBalance === 0){
-    $('div#savings-balance').css('background-color', 'red');
-  }
-  $('div#savings-balance').text(`$${$savingsBalance}`);
-})
+  const savingsDeposit = function(){
+    return parseFloat($('#savings-amount').val()) + savingsBalance();
+  };
 
 
+  const savingsWithdraw = function(amount){
+    if (savingsBalance() >= amount){
+      return savingsBalance() - amount;
+    } else {
+        if (savingsBalance() < amount){
+
+          if ((savingsBalance() + checkBalance()) < amount){
+            alert ("insufficient funds")
+            return savingsBalance();
+          } else {
+            alert ("you've overdrafted your account");
+            let currentBalance = savingsBalance();
+            let overdraft = amount - currentBalance;
+            $('div #checking-balance').text(`$${checkWithdraw(overdraft)}`);
+            return savingsBalance() - currentBalance;
+          }
+        }
+    }
+  };
 
 
+  $('#savings-deposit').click(function(){
+    $('div #savings-balance').text(`$${savingsDeposit()}`);
+    colorCheck();
+  });
 
-
+  $('#savings-withdraw').click(function(){
+    $('div #savings-balance').text(`$${savingsWithdraw(parseFloat($('#savings-amount').val()))}`);
+    colorCheck();
+  });
 
 
 });
