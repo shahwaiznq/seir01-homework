@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+body {
+  background-color: white;
+  font-family: 'Noto Sans', sans-serif;
+  margin-bottom: 0;
+}
+
+.container {
+  max-width: 960px; /* lazy responsice container */
+  background-color: white;
+  margin: auto; /* Horizontal centering */
+}
+
+header {
+  background-image: url('../images/logo-header.png');
+  background-size: 62px 62px;
+  background-repeat: no-repeat;
+}
+
+header h1 {
+  padding: 0px 0 0 74px;
+  margin-block-end: 0;
+}
+
+header h2 {
+  padding: 0 0 0 74px;
+  margin: 0;
+  color: #585450;
+}
+
+.topnav {
+  background-color: rgb(145, 1, 1);
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  color: white;
+}
+.h2 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.main-photo {
+  box-shadow: 0 0 4px #000000;
+  margin-right: 30px;
+}
+
+.img2 {
+  width: 175px;
+  box-shadow: 0 0 4px #000000;
+  margin-top: 30px;
+}
+
+.funfacts-img {
+  box-shadow: 0 0 4px #000000;
+}
+
+main p {
+  display: inline-block;
+  width: 71%;
+  vertical-align: top;
+  margin: 0;
+}
+
+p span {
+  font-weight: bolder;
+  font-size: 18px;
+}
+
+.home-p {
+  width: 62%;
+}
+
+.hometown {
+  width: 300px;
+  box-shadow: 0 0 4px #000000;
+  margin-right: 30px;
+}
+
+.italic {
+  font-style: italic;
+}
+
+footer {
+  background-color: rgb(145, 1, 1);
+  color: #f2f2f2;
+  text-align: left;
+  padding: 3px 10px;
+  text-decoration: none;
+  margin-top: 50px;
+}
