@@ -1,19 +1,19 @@
-
-const image1 = document.getElementsByTagName('img')[0];
-      image1.style.left = "0px";
-      image1.style.top = '50%';
-
-const catWalk = function () {
-  let oldWalk = parseInt(image1.style.left);
-  let newWalk = oldWalk + 10;
-  image1.style.left = newWalk + 'px';
-
-  // bonus 1
-  if (newWalk > innerWidth-image1.width) {
-    image1.style.left = "0px";
-  }
-}
-  setInterval(catWalk, 50)
+//
+// const image1 = document.getElementsByTagName('img')[0];
+//       image1.style.left = "0px";
+//       image1.style.top = '50%';
+//
+// const catWalk = function () {
+//   let oldWalk = parseInt(image1.style.left);
+//   let newWalk = oldWalk + 10;
+//   image1.style.left = newWalk + 'px';
+//
+//   // bonus 1
+//   if (newWalk > innerWidth-image1.width) {
+//     image1.style.left = "0px";
+//   }
+// }
+//   setInterval(catWalk, 50)
 
   //bonus 2
 
@@ -24,25 +24,28 @@ const catWalk = function () {
   const catWalk = function () {
   let oldWalk = parseInt(image1.style.left);
 
-  if (oldWalk > innerWidth-250) {
+
+      if (oldWalk > innerWidth-250) {
     direction = 'left'
-  }
+    image1.style.transform = "scaleX(-1)";
 
-  if (oldWalk < 20) {
+      }
+
+      if (oldWalk < 20) {
     direction = 'right'
-  }
+    image1.style.transform = "scaleX(+1)";
+      }
 
-  if (direction === 'right') {
+      if (direction === 'right') {
     let newWalk = oldWalk + 10;
     image1.style.left = newWalk + 'px';
     console.log(image1.style.left);
 
-} else if (direction === 'left') {
+      } else if (direction === 'left') {
     let newWalk = oldWalk - 10;
     image1.style.left = newWalk + 'px';
   }
 }
-
     const walking = setInterval(catWalk, 50)
 //
 
