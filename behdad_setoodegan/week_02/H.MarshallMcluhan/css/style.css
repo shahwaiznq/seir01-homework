@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Noto+Sans+JP&display=swap');
+
+.container{
+	background-color: lightgray;
+	filter: drop-shadow(5px 5px 5px #222);
+}
+
+header{
+	text-align : center;
+}
+
+.home img{
+	border-radius: 10px;
+	width: 90%;
+	display: block;
+	margin: auto;
+	filter: drop-shadow(0 5px 5px #222);
+}
+
+article {
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-bottom: 30px;
+	
+}
+
+.books img{
+	border-radius: 10px;
+	width: 1;
+	padding: 40px;
+}
+
+body {
+	font-family: 'Kanit', sans-serif;
+	width: 1080px;
+	margin: auto; /*centers our container on the page */   
+}
+
+a{
+	color: white;
+	text-decoration: none;
+	padding: 20px;
+}
+
+nav a:hover{
+	background-color: lightgrey;
+	color: black;
+	transition: 0.5s all;
+	margin: 20px;
+	border-radius: 5px;
+}
+
+nav{
+	background-color: black;
+	padding: 20px;
+	border-radius: 0 0 10px 10px ;
+}
+
+
+footer{
+	background-color: black;
+	color: white;
+	display: inline-flex;
+	margin: 0 auto;
+	border-radius: 0 0 10px 10px ;
+}
+.left{
+	width: 30%;
+}
+
+.mid{
+	width: 50%;
+}
+
+.right{
+	width: 30%;
+}
+
+ul {
+	list-style-type: none;
+  }
+
+  .books{
+	width: 30%;
+  }
+
+h3{
+	padding-left: 40px;
+	margin-bottom: 80px;
+}
+
+.artbooks{
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-bottom: 30px;
+	display: inline-flex;
+	width: 100%;
+}
+iframe{
+	padding-top: 100px;
+	padding-bottom: 50px;
+	display: block;
+	margin: 0 auto;
+}
+article h2{
+	padding-left: 200px;
+}
+
+
