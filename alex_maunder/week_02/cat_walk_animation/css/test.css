@@ -1,0 +1,11 @@
+.imgbg {
+  display: block;
+  width: 150px;
+  height: 112px;
+  background-image: url(/Users/alex/Projects/seir01-homework/alex_maunder/week_02/cat_walk_animation/img/joelhead.png);
+  background-repeat: no-repeat;
+}
+.imgpos {
+  position: absolute;
+  background-position: 0px 0px;
+}
