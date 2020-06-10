@@ -1,0 +1,30 @@
+#catlady, #luka {
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  float: inherit;
+
+}
+
+body {
+  background-image: url(https://scontent-syd2-1.xx.fbcdn.net/v/t1.0-9/79760679_108916783950563_5103654842644037632_n.jpg?_nc_cat=109&_nc_sid=110474&_nc_ohc=dTO8_wWOxwUAX_2MO-5&_nc_ht=scontent-syd2-1.xx&oh=e5e8a389e54073d571458305a6fa4920&oe=5EF366BD);
+  background-size: cover;
+}
+
+#catlady {
+
+     width:200px;
+     height: 200px;
+     -webkit-animation: fadeinout 4s linear forwards;
+     animation: fadeinout 4s linear forwards;
+ }
+
+ @-webkit-keyframes fadeinout {
+   0%,100% { opacity: 0; }
+   50% { opacity: 1; }
+ }
+
+ @keyframes fadeinout {
+   0%,100% { opacity: 0; }
+   50% { opacity: 1; }
+ }
