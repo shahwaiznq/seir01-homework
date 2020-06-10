@@ -1,0 +1,38 @@
+body {
+  background: limegreen;
+}
+
+.box {
+  background-color: white;
+  width: 300px;
+  height: 300px;
+
+  /* variatic, different arguments are passed */
+  border: 1px solid black;
+  /* border width/type/color border-left: none? */
+  text-align: center;
+  line-height: 300px;
+  /* cheap way to vertically center single line of text */
+
+}
+
+.block {
+  display: block;
+  /* div has width of the parent */
+}
+
+.inline {
+  display: inline;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.none {
+  display: none;
+}
+
+.hidden {
+  visibility: hidden;
+}
