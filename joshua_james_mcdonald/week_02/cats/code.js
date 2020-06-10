@@ -49,7 +49,7 @@ const createCat = function () {
         } else {
             cat.src = 'bloodsplatter.gif';
             setTimeout(function () {
-                alert("Somthing went wrong...");
+                alert("Something went wrong...");
                 setTimeout(function () {
                     alert("Did you have to pop so many cats.....");
                     setTimeout(function () {
