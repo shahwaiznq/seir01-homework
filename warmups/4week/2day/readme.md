@@ -1,4 +1,4 @@
-## Warmup - Raindrops
+# Warmup - Raindrops
 
 Write a program using Ruby that will take a number (eg 28 or 1755 or 9, etc) and output the following:
 
@@ -7,7 +7,7 @@ Write a program using Ruby that will take a number (eg 28 or 1755 or 9, etc) and
 - If the number contains 7 as a factor, output 'Plong'.
 - If the number does not contain 3, 5, or 7 as a factor, output the number as a string.
 
-### Examples
+# Examples
 
 - 28 has 7 as a factor.
 
