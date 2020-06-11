@@ -1,0 +1,45 @@
+.space {
+  visibility: hidden;
+  height: 450px;
+  width: auto;
+}
+
+.imgbg {
+  display: block;
+  width: 150px;
+  height: 112px;
+  background-image: url(/Users/alex/Projects/seir01-homework/alex_maunder/week_02/cat_walk_animation/img/joelhead.png);
+  background-repeat: no-repeat;
+}
+.imgpos {
+  position: absolute;
+  background-position: center;
+}
+
+#unmuteButton {
+  visibility: hidden;
+  background-color: green;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+#fullJoelMode {
+  visibility: hidden;
+  background-color: red;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
