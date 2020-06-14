@@ -1,0 +1,11 @@
+<h2> View </h2>
+<form action="/edit/<%= @bug_info[0]["id"]%>" method="post">
+    <label for="">User Name:</label>
+     <%= @bug_info[0]["username"]%>
+
+    <label for="">Enter a title:</label>
+    <%= @bug_info[0]["title"]%>
+
+    <label for="">Description:</label>
+    <%= @bug_info[0]["description"]%>
+</form>
