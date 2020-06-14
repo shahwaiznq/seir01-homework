@@ -34,12 +34,12 @@ get '/edit/:id' do
 end
 
 post "/edit/:id" do
-    query = "UPDATE bugs SET username = '#{@params[:user_name]}', title = '#{@params[:tite]}', description= '#{@params[:description]}' WHERE id='#{@params[:id]}'"
+    query = "UPDATE bugs SET username = '#{@params[:user_name]}', title = '#{@params[:title]}', description= '#{@params[:description]}' WHERE id='#{@params[:id]}'"
     query_db(query)
     redirect to '/'
 end
 
-get "view/:id" do
+get "/view/:id" do
     query = "SELECT * FROM bugs WHERE id = #{@params[:id]}"
     @bug_info = query_db(query)
     erb :view

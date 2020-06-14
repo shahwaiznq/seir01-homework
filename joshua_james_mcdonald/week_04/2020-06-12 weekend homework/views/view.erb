@@ -1,11 +1,25 @@
-<h2> View </h2>
-<form action="/edit/<%= @bug_info[0]["id"]%>" method="post">
-    <label for="">User Name:</label>
-     <%= @bug_info[0]["username"]%>
+<div class="bug_item">
+    <h3><%= @bug_info[0]["title"] %></h3>
+    <div class="username">
+        <strong>Submitted by:</strong> <%= @bug_info[0]["username"] %>
+    </div>
+    <div class="title">
+        <strong>Title:</strong> <%= @bug_info[0]["title"] %>
+    </div>
+    <div class="description">
+        <strong>Description: </strong> <br>
+        <span class="description-small">
+            <%= @bug_info[0]["description"]%>
 
-    <label for="">Enter a title:</label>
-    <%= @bug_info[0]["title"]%>
+        </span>
+    </div>
+    <div class="controls">
+        <a href="/edit/<%= @bug_info[0]["id"] %>">
+            <button class="small-btn" name="edit_button">Edit</button>
+        </a>
+        <a href="/del/<%= @bug_info[0]["id"] %>">
+            <button class="small-btn" name="delete_button">Delete</button>
+        </a>
+    </div>
 
-    <label for="">Description:</label>
-    <%= @bug_info[0]["description"]%>
-</form>
+</div>
