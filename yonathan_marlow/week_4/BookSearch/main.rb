@@ -18,6 +18,6 @@ get '/found_book' do
   @info_thumbnail = @info['items'][0]['volumeInfo']['imageLinks']['thumbnail']
   @info_summary = @info['items'][1]["volumeInfo"]["description"]
   @info_author = @info['items'][1]["volumeInfo"]["authors"][0]
-  @info_ratings = @info['items'][1]["volumeInfo"]["averageRating"]
+  @info_ratings = @info['items'][0]["volumeInfo"]["averageRating"]
   erb :found_book
 end
