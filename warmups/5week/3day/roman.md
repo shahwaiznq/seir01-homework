@@ -32,7 +32,7 @@ See [this website](http://www.romannumerals.co.uk/roman-numerals/numerals-chart.
 
 Do this in Ruby.
 
-```plain
+```ruby
 roman = {
 1000 => 'M',
 900 => 'CM',

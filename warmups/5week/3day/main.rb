@@ -16,4 +16,5 @@ while guessed
 	end
 end
 
+# puts "wowowowo you got #{memory.size}"
 puts memory.size > 5 ? "Hot digidi damn you got #{memory.size}" : "Huh, lame. You got #{memory.size}"
