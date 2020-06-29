@@ -11,16 +11,15 @@
 // 	};
 
 // 	const out = [];
-
-// 	Object.keys(scorecard)
-// 		.reverse()
-// 		.forEach(function (food) {
-// 			if (food <= score) {
-// 				score -= food;
-// 				out.push(scorecard[food]);
-// 			}
-// 		});
-
+// 	const keys = Object.keys(scorecard).reverse();
+// 	for (let i = 0; i <= keys.length; i++) {
+// 		const current = keys[i];
+// 		if (current <= score) {
+// 			score -= current;
+// 			out.push(scorecard[current]);
+// 		}
+// 		if (score === 0) break;
+// 	}
 // 	return out;
 // };
 
@@ -36,7 +35,7 @@ const scorecard = [
 ];
 
 const allergies = (score, out = [], index = scorecard.length) =>
-	score <= 0
+	score === 0
 		? out
 		: score >= 2 ** index
 		? allergies(score - 2 ** index, [...out, scorecard[index]], index - 1)
